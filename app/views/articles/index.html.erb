@@ -1,0 +1,9 @@
+<h1>Articles#list</h1>
+<p>Find me in app/views/articles/list.html.erb</p>
+<% @articles.each do |article| %>
+  <h2><%= article.title %></h2>
+  <p><%= link_to 'See article', article_path(article) %></p>
+  <p><%= link_to 'Edit article', edit_article_path(article) %></p>
+  <p><%= link_to 'Delete article', article_path(article), method: :delete %></p>
+<% end %>
+<p><%= link_to 'Add new article', new_article_path %></p>
